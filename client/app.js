@@ -1,7 +1,5 @@
 async function createOrderCallback() {
   try {
-    //const quantity = parseFloat(document.getElementById('quantity').value).toFixed(2);
-    //const price = parseFloat(document.getElementById('amount').value).toFixed(2);
     const quantity = parseFloat(document.getElementById('userInputQuantity').value).toFixed(2);
     const price = parseFloat(document.getElementById('userInputPrice').value).toFixed(2);
     const response = await fetch("/api/orders", {
@@ -9,12 +7,10 @@ async function createOrderCallback() {
       headers: {
         "Content-Type": "application/json",
       },
-      // use the "body" param to optionally pass additional order information
-      // like product ids and quantities
       body: JSON.stringify({
         cart: [
           {
-            id: "387231987",
+            id: "1FCA558",
             quantity: quantity,
             price: price
           },
@@ -133,12 +129,6 @@ if (window.paypal.HostedFields.isEligible()) {
         selector: "#card-number",
         placeholder: "4111 1111 1111 1111",
       },
-/*
-      cvv: {
-        selector: "#cvv",
-        placeholder: "123",
-      },
-*/
       expirationDate: {
         selector: "#expiration-date",
         placeholder: "MM/YY",
