@@ -1,6 +1,6 @@
 {
-  "name": "paypal-advanced-integration",
-  "description": "Sample Node.js web app to integrate PayPal Advanced Checkout for online payments",
+  "name": "Andrews One",
+  "description": "Andrews One Store",
   "version": "1.0.0",
   "main": "server/server.js",
   "type": "module",
